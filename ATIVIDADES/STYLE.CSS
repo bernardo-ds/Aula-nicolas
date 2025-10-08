@@ -1,0 +1,40 @@
+/*classe ( . ) */
+/*ID     ( # ) */
+
+/*h1 {        seletor de TAG
+   color:blue
+}*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.cor-azul{
+    color: blue;
+    background-color: aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.quadrado-verde{
+    background-color: green;
+    color: white;
+    height: 150px;
+    width: 150px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+}
+
+.quadrado-roxo{
+    background-color: rgb(195, 0, 255);
+    color: white;
+    height: 150px;
+    width: 150px;
+}
+
+.alinhamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
