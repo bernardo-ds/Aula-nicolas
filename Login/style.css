@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    height: 100vh;
+}
+.flex{
+    display: flex;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.quadrado-1{
+    height: 600px;
+    width: 900px;
+    background-color: rgb(105, 154, 226);
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgb(46, 122, 236);
+}
+.quadrado-2{
+    height: 600px;
+    width: 300px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: rgb(3, 91, 255);
+}
+.quadrado-3{
+    height: 40px;
+    width: 150px;
+    background-color:rgb(51, 146, 235);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    border-radius: 7px;
+}
+.quadrado-4{
+    height: 600px;
+    width: 600px;
+    background-color: rgb(105, 154, 226);
+    border-radius: 30px;
+}
+
+.fonte{
+    font-family: Impact,fantasy;
+}
+.flexd{
+    flex-direction: column;
+}
+.cima{
+    margin-top: 50px;
+}
+
+.h-50{
+    height: 50%;
+    width: 100%;
+}
+.font{
+    font-family: Stencil Std,fantasy;
+    font-size: larger;
+}
