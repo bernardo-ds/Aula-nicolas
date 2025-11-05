@@ -25,20 +25,31 @@
             <form class="form" id="register-form">
 
                 <div class="form-group">
-                    <input type="name" id="usuario" class="form-input" placeholder="Usuário">
+                    <input type="text" id="nome" class="form-input" placeholder="Nome Completo">
                     <i class="fas fa-user form-input-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="usuario" class="form-input" placeholder="CPF (será seu usuário)">
+                    <i class="fas fa-id-card form-input-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="dataNascimento" class="form-input" placeholder="Data de Nascimento" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <i class="fas fa-calendar-alt form-input-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="telefone" class="form-input" placeholder="Telefone (ex: 11987654321)">
+                    <i class="fas fa-phone form-input-icon"></i>
                 </div>
 
                 <div class="form-group">
                     <input type="password" id="senha" class="form-input" placeholder="Senha">
                     <i class="fas fa-lock form-input-icon"></i>
                 </div>
-                <div class="form-group">
-                    <input type="password" id="confirmarSenha" class="form-input" placeholder="Confirmar senha">
-                    <i class="fas fa-lock form-input-icon"></i>
-                </div>
 
-                <button type="submit" class="btn btn-primary" role="button" onclick="cadastrar()">Cadastrar</button>
+                <button type="button" class="btn btn-primary" role="button" onclick="cadastrar()">Cadastrar</button>
             </form>
 
         </section>

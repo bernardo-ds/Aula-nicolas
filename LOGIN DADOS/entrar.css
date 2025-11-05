@@ -37,11 +37,10 @@
     overflow: hidden;
 }
 
-/* Painel lateral (NOVA PALETA VERDE/TEAL) */
 .quadrado-2 {
     height: 600px;
     width: 300px;
-    /* NOVAS CORES AQUI */
+ 
     background: linear-gradient(145deg, #0f766e, #14b8a6);
     color: #ffffff;
     padding: 20px;
@@ -50,7 +49,7 @@
     align-items: center;
 }
 
-/* Título e subtítulo no painel de gradiente */
+
 .quadrado-2 .fonte {
     color: #ffffff;
     font-size: 2rem;
@@ -63,7 +62,7 @@
     margin-bottom: 30px;
 }
 
-/* Botão secundário */
+
 .quadrado-3 {
     height: 45px;
     width: 160px;
@@ -77,15 +76,15 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Efeito hover com a nova cor */
+
 .quadrado-3:hover {
     background-color: #ffffff;
-    color: #0f766e; /* Cor escura do novo gradiente */
+    color: #0f766e; 
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* Painel principal (Formulário de Login) */
+
 .quadrado-4 {
     height: 600px;
     width: 600px;
@@ -117,14 +116,14 @@
     color: #333;
 }
 
-/* Estilo para o container do input com ícone */
+
 .input-com-icone {
     position: relative;
     width: 350px;
     margin: 10px 0;
 }
 
-/* Estilo do Ícone */
+
 .input-com-icone i {
     position: absolute;
     left: 18px;
@@ -135,7 +134,7 @@
     transition: color 0.3s ease-in-out;
 }
 
-/* Estilo dos Inputs */
+
 .in {
     height: 50px;
     width: 100%;
@@ -152,24 +151,24 @@
     color: #aaa;
 }
 
-/* Efeito de foco nos inputs com a nova cor */
+
 .in:focus {
     outline: none;
-    border-color: #0f766e; /* Cor escura do novo gradiente */
-    box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15); /* Sombra de foco verde */
+    border-color: #0f766e; 
+    box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15); 
 }
 
-/* Muda a cor do ícone quando o input está em foco */
+
 .input-com-icone .in:focus + i,
 .input-com-icone i:hover {
-    color: #0f766e; /* Cor escura do novo gradiente */
+    color: #0f766e; 
 }
 
-/* Botão principal (Ex: "LOGIN") */
+
 .bot {
     height: 50px;
     width: 350px;
-    /* NOVAS CORES AQUI */
+    
     background: linear-gradient(145deg, #0f766e, #14b8a6);
     border-radius: 50px;
     font-size: 16px;
@@ -183,7 +182,7 @@
 }
 
 .bot:hover {
-    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3); /* Sombra hover verde */
+    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3); 
     transform: translateY(-2px);
 }
 
@@ -191,13 +190,12 @@
     margin: 10px 0;
 }
 
-/* Sua classe customizada para esta página */
 .subir {
     margin-top: 0;
     font-size: 2.5rem;
 }
 
-/* Ajustes de layout para o .quadrado-2 */
+
 .quadrado-2 .h-50:first-child {
     display: flex;
     flex-direction: column;

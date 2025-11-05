@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flexd {
+    flex-direction: column;
+}
+.quadrado-1{
+    height: 10%;
+    width: 100%;
+    background-color: #0f766e;
+    /* Posição relativa para ancorar elementos absolutos */
+    position: relative; 
+}
+.font{
+    font-size: xxx-large;
+    color: white;
+}
+.logo{
+    height: 180%;
+}
+.lado{
+    margin: 660px;
+}
+.senai{
+    height: 85%;
+    justify-content: start;
+    align-items: center;
+}
+
+.esquerda{
+    position: absolute;
+    left: 15px;
+    height: 60px;
+}
+
+/* =========================================== */
+/* === ESTILOS ATUALIZADOS PARA O DROPDOWN DE PERFIL === */
+/* =========================================== */
+
+/* Container que segura o ícone e a lista */
+.perfil-dropdown {
+    position: absolute;
+    right: 30px; /* Distância da borda direita */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+/* O ícone de usuário */
+.icon-perfil {
+    color: #ffffff;
+    font-size: 1.8rem; /* Tamanho do ícone */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon-perfil:hover {
+    color: #cffaf5; /* Um verde bem claro no hover */
+}
+
+/* A caixa da lista (escondida por padrão) */
+.perfil-lista {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 100%; /* Aparece abaixo do ícone */
+    right: 0;
+    width: 200px; /* Ajustei a largura */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* Ajustei o padding */
+    margin-top: 15px;
+    color: #333;
+    text-align: left;
+}
+
+/* Adiciona uma setinha para cima */
+.perfil-lista::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+/* O "truque" do hover: quando passar o mouse no container, mostre a lista */
+.perfil-dropdown:hover .perfil-lista {
+    display: block;
+}
+
+/* Estilos para o conteúdo da lista */
+.perfil-lista h3 {
+    margin: 0 5px 5px 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    color: #0f766e;
+}
+
+.perfil-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.perfil-lista ul li a {
+    display: block;
+    padding: 10px 10px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.perfil-lista ul li a:hover {
+    background-color: #f4f7f6;
+    color: #0f766e;
+}
+
+/* Estilo especial para o botão "Sair" */
+.perfil-lista ul li a.menu-sair {
+    color: #e53e3e; /* Vermelho para "Sair" */
+    font-weight: 700;
+}
+
+.perfil-lista ul li a.menu-sair:hover {
+    background-color: #fef2f2; /* Fundo vermelho claro no hover */
+    color: #c53030;
+}
+
+.quadrado-2{
+    height: 50%;
+    width: 100%;
+}
+
+.img{
+    height: 40%;
+    box-shadow: 0px 0px 20px #0f766e;
+    border-radius: 10px;
+}
+
+.centro{
+    justify-content: center;
+    
+}

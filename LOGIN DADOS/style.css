@@ -1,44 +1,43 @@
-/*
- * =========================================
- * DESIGN PROFISSIONAL: VARIÁVEIS DE TEMA
- * =========================================
- * Mude os valores aqui para alterar o tema de todo o site.
- */
 :root {
-    --color-bg: #f0f4f8; /* Fundo da página (cinza bem claro) */
-    --color-surface: #ffffff; /* Cor do "card" principal */
-    --color-panel: #1a202c; /* Cor do painel lateral (grafite/azul-marinho) */
-    --color-panel-text: #ffffff;
+    /* Paleta de cores atualizada para "Saúde e Estética" (Verde/Teal)
+    */
+    --color-bg: #f8fbfb; /* Um branco quase imperceptivelmente verde, muito limpo */
+    --color-surface: #ffffff; 
     
-    --color-primary: #007bff; /* Cor de destaque principal (azul elétrico) */
-    --color-primary-dark: #0056b3; /* Cor para :hover do botão primário */
+    /* Cores primárias (Verde/Teal) */
+    --color-primary: #0f766e; /* Verde escuro principal */
+    --color-primary-dark: #0b5a54; /* Tom mais escuro para hover */
 
-    --color-secondary: #6c757d; /* Cor do botão secundário (cinza) */
-    --color-secondary-dark: #5a6268; /* Cor para :hover do botão secundário */
-
-    --color-text-primary: #2d3748; /* Texto principal (escuro) */
-    --color-text-secondary: #718096; /* Texto secundário (cinza claro) */
+    /* Cores de Texto */
+    --color-text-primary: #2d3748; /* Mantido (bom contraste) */
+    --color-text-secondary: #718096; /* Mantido (bom para placeholders) */
     
-    --color-input-bg: #edf2f7; /* Fundo dos inputs */
-    --color-input-border: #e2e8f0;
-    --color-input-focus: var(--color-primary);
+    /* Cores de Inputs (mais limpas) */
+    --color-input-bg: #f4f7f6; /* Fundo de input verde-claro/cinza */
+    --color-input-border: #e0e0e0; /* Borda de input neutra */
+    --color-input-focus: var(--color-primary); /* Foco usa o verde primário */
     
-    --color-error: #e53e3e; /* Cor para mensagens de erro */
+    --color-error: #e53e3e; /* Mantido */
 
+    /* Variáveis de UI */
     --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --border-radius-card: 20px;
     --border-radius-controls: 8px;
     --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.1);
-    --shadow-controls: 0 4px 12px rgba(0, 123, 255, 0.15);
+    
+    /* Sombra atualizada para combinar com o verde */
+    --shadow-controls: 0 4px 12px rgba(15, 118, 110, 0.15); 
 
     --transition-speed: 0.3s ease;
+    
+    /* Variáveis antigas (não são mais o foco principal) */
+    --color-panel: #0f766e; 
+    --color-panel-text: #ffffff;
+    --color-secondary: #6c757d; 
+    --color-secondary-dark: #5a6268; 
 }
 
-/*
- * =========================================
- * RESET GLOBAL E ESTILOS DE BASE
- * =========================================
- */
+
 * {
     margin: 0;
     padding: 0;
@@ -60,11 +59,7 @@ a {
     color: inherit;
 }
 
-/*
- * =========================================
- * ESTRUTURA PRINCIPAL (O ANTIGO ".QUADRADO-1")
- * =========================================
- */
+
 .auth-container {
     display: flex;
     width: 900px;
@@ -72,22 +67,19 @@ a {
     background-color: var(--color-surface);
     border-radius: var(--border-radius-card);
     box-shadow: var(--shadow-card);
-    overflow: hidden; /* Garante que os filhos respeitem o border-radius */
+    overflow: hidden; 
 }
 
-/*
- * =========================================
- * PAINEL LATERAL DE BOAS-VINDAS (O ANTIGO ".QUADRADO-2")
- * =========================================
- */
+
+/* Painel lateral com o novo gradiente verde */
 .panel-welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 350px; /* Um pouco mais largo para melhor proporção */
-    background-color: var(--color-panel);
+    width: 350px; 
+    background: linear-gradient(145deg, #0f766e, #14b8a6); /* Gradiente Verde */
     color: var(--color-panel-text);
     padding: 40px;
 }
@@ -101,20 +93,16 @@ a {
     font-size: 1.1rem;
     font-weight: 300;
     margin-bottom: 30px;
-    color: var(--color-text-secondary);
+    color: #ffffff; /* Texto branco (como ajustado antes) */
 }
 
-/*
- * =========================================
- * PAINEL DO FORMULÁRIO (O ANTIGO ".QUADRADO-4")
- * =========================================
- */
+
 .panel-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1; 
     padding: 50px;
 }
 
@@ -124,11 +112,7 @@ a {
     margin-bottom: 30px;
 }
 
-/*
- * =========================================
- * ESTILOS DOS BOTÕES (PROFISSIONAIS)
- * =========================================
- */
+
 .btn {
     display: inline-block;
     height: 50px;
@@ -141,10 +125,11 @@ a {
     cursor: pointer;
     transition: all var(--transition-speed);
     text-align: center;
-    line-height: 50px; /* Centraliza o texto verticalmente */
+    line-height: 50px;
 }
 
-/* Botão Primário (Login, Cadastrar) */
+
+/* Botão primário (Formulário) atualizado para verde */
 .btn-primary {
     background-color: var(--color-primary);
     color: #ffffff;
@@ -155,23 +140,26 @@ a {
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.25);
+    box-shadow: 0 6px 16px rgba(15, 118, 110, 0.25); /* Sombra Verde */
 }
 
-/* Botão Secundário (Trocar de tela) */
+
+/* Botão secundário (Painel) com hover atualizado */
 .btn-secondary {
-    background-color: var(--color-secondary);
+    background-color: transparent;
+    border: 2px solid #ffffff;
     color: #ffffff;
-    width: 180px; /* Tamanho diferente para destaque */
+    width: 180px;
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-secondary-dark);
+    background-color: #ffffff;
+    color: var(--color-primary); /* Cor do texto no hover atualizada */
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Botão para a página de sucesso "IR PARA LOGIN" */
+
 .btn-secondary.btn-success {
     background-color: transparent;
     border: 2px solid var(--color-primary);
@@ -184,11 +172,7 @@ a {
 }
 
 
-/*
- * =========================================
- * ESTILOS DE FORMULÁRIO (INPUTS, ÍCONES)
- * =========================================
- */
+
 .form {
     width: 100%;
     display: flex;
@@ -202,7 +186,7 @@ a {
     margin-bottom: 20px;
 }
 
-/* Labels para acessibilidade (escondidas visualmente) */
+
 .form-label {
     position: absolute;
     width: 1px;
@@ -214,13 +198,14 @@ a {
     border: 0;
 }
 
+/* Inputs atualizados para o tema */
 .form-input {
     height: 50px;
     width: 100%;
     background-color: var(--color-input-bg);
     border: 1px solid var(--color-input-border);
     border-radius: var(--border-radius-controls);
-    padding: 0 20px 0 50px; /* Espaço para o ícone */
+    padding: 0 20px 0 50px;
     font-size: 1rem;
     color: var(--color-text-primary);
     transition: all var(--transition-speed);
@@ -230,11 +215,12 @@ a {
     color: var(--color-text-secondary);
 }
 
+/* Foco do input atualizado para verde */
 .form-input:focus {
     outline: none;
     border-color: var(--color-input-focus);
     background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15); /* Sombra de foco verde */
 }
 
 .form-input-icon {
@@ -247,15 +233,12 @@ a {
     transition: color var(--transition-speed);
 }
 
+/* Ícone do input atualizado para verde no foco */
 .form-input:focus ~ .form-input-icon {
     color: var(--color-primary);
 }
 
-/*
- * =========================================
- * MENSAGEM DE ERRO (PARA O JS)
- * =========================================
- */
+
 .error-message {
     width: 350px;
     padding: 10px;
@@ -269,13 +252,7 @@ a {
     display: none; /* Escondido por padrão */
 }
 
-/*
- * =========================================
- * ESTILOS ESPECÍFICOS DA PÁGINA
- * =========================================
- */
 
-/* Página de Sucesso (cadastrar.html) */
 .panel-success {
     text-align: center;
 }
