@@ -1,0 +1,266 @@
+:root {
+    /* Paleta de cores atualizada para "Saúde e Estética" (Verde/Teal)
+    */
+    --color-bg: #f8fbfb; /* Um branco quase imperceptivelmente verde, muito limpo */
+    --color-surface: #ffffff; 
+    
+    /* Cores primárias (Verde/Teal) */
+    --color-primary: #0f766e; /* Verde escuro principal */
+    --color-primary-dark: #0b5a54; /* Tom mais escuro para hover */
+
+    /* Cores de Texto */
+    --color-text-primary: #2d3748; /* Mantido (bom contraste) */
+    --color-text-secondary: #718096; /* Mantido (bom para placeholders) */
+    
+    /* Cores de Inputs (mais limpas) */
+    --color-input-bg: #f4f7f6; /* Fundo de input verde-claro/cinza */
+    --color-input-border: #e0e0e0; /* Borda de input neutra */
+    --color-input-focus: var(--color-primary); /* Foco usa o verde primário */
+    
+    --color-error: #e53e3e; /* Mantido */
+
+    /* Variáveis de UI */
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --border-radius-card: 20px;
+    --border-radius-controls: 8px;
+    --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.1);
+    
+    /* Sombra atualizada para combinar com o verde */
+    --shadow-controls: 0 4px 12px rgba(15, 118, 110, 0.15); 
+
+    --transition-speed: 0.3s ease;
+    
+    /* Variáveis antigas (não são mais o foco principal) */
+    --color-panel: #0f766e; 
+    --color-panel-text: #ffffff;
+    --color-secondary: #6c757d; 
+    --color-secondary-dark: #5a6268; 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.auth-container {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden; 
+}
+
+
+/* Painel lateral com o novo gradiente verde */
+.panel-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px; 
+    background: linear-gradient(145deg, #0f766e, #14b8a6); /* Gradiente Verde */
+    color: var(--color-panel-text);
+    padding: 40px;
+}
+
+.panel-welcome h1 {
+    font-size: 2.25rem;
+    margin-bottom: 15px;
+}
+
+.panel-welcome p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #ffffff; /* Texto branco (como ajustado antes) */
+}
+
+
+.panel-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+    padding: 50px;
+}
+
+.panel-form h1 {
+    font-size: 2.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 30px;
+}
+
+
+.btn {
+    display: inline-block;
+    height: 50px;
+    width: 350px;
+    border: none;
+    border-radius: var(--border-radius-controls);
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* Botão primário (Formulário) atualizado para verde */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-controls);
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 118, 110, 0.25); /* Sombra Verde */
+}
+
+
+/* Botão secundário (Painel) com hover atualizado */
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    width: 180px;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--color-primary); /* Cor do texto no hover atualizada */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.btn-secondary.btn-success {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    width: 200px;
+}
+.btn-secondary.btn-success:hover {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    position: relative;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+
+.form-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Inputs atualizados para o tema */
+.form-input {
+    height: 50px;
+    width: 100%;
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--border-radius-controls);
+    padding: 0 20px 0 50px;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    transition: all var(--transition-speed);
+}
+
+.form-input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+/* Foco do input atualizado para verde */
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-input-focus);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15); /* Sombra de foco verde */
+}
+
+.form-input-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    transition: color var(--transition-speed);
+}
+
+/* Ícone do input atualizado para verde no foco */
+.form-input:focus ~ .form-input-icon {
+    color: var(--color-primary);
+}
+
+
+.error-message {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(229, 62, 62, 0.1);
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+    border-radius: var(--border-radius-controls);
+    text-align: center;
+    font-size: 0.9rem;
+    display: none; /* Escondido por padrão */
+}
+
+
+.panel-success {
+    text-align: center;
+}
+.panel-success h1 {
+    margin-bottom: 10px;
+}
+.panel-success p {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+}
