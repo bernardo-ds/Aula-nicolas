@@ -52,6 +52,6 @@ function login(){
 
         window.location.href = "./inicial.html"; 
     } else {
-        return alert("Senha incorreta.");
+        return alert("Senha incorreta e/ou usuario incorreto.");
     }
 }
