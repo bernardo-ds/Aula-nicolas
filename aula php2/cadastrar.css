@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.cor {
+    height: 100%;
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+.container {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flexd {
+    flex-direction: column;
+}
+
+.quadrado-1 {
+    height: 600px;
+    width: 900px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Painel lateral (NOVA PALETA VERDE/TEAL) */
+.quadrado-2 {
+    height: 600px;
+    width: 300px;
+    /* NOVAS CORES AQUI */
+    background: linear-gradient(145deg, #0f766e, #14b8a6);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título e subtítulo no painel de gradiente */
+.quadrado-2 .fonte {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.quadrado-2 .Font-size {
+    color: #f1f1f1;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* O botão de "IR PARA LOGIN" na página de cadastro */
+.quadrado-3 {
+    height: 45px;
+    width: auto;
+    padding: 0 30px;
+    background-color: transparent;
+    border: 2px solid #0f766e; /* Borda da cor do gradiente mais escura */
+    border-radius: 50px;
+    color: #0f766e; /* Cor da borda */
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+}
+
+/* Efeito hover com a nova cor */
+.quadrado-3:hover {
+    background-color: #0f766e; /* Preenchimento verde escuro */
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(15, 118, 110, 0.25); /* Sombra verde */
+}
+
+/* Painel principal (Mensagem "Conta Criada!") */
+.quadrado-4 {
+    height: 600px;
+    width: 600px;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.h-50 {
+    height: auto;
+    width: 100%;
+}
+
+.cima {
+    margin-top: 0;
+}
+
+.fonte {
+    font-weight: 700;
+    color: #333;
+}
+
+.titulo {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Ajuste para o subtítulo "Agora você já pode fazer login" */
+.quadrado-4 .fonte {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Ajustes de layout para o .quadrado-2 */
+.quadrado-2 .h-50:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
