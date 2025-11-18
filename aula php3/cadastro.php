@@ -1,3 +1,30 @@
+<?php
+require("connection.php");
+
+if ($_POST) {
+    $nome = $_POST['nome'];
+
+    $email = $_POST['email'];
+
+    $password = $_POST['password'];
+
+    $confirm_password = $_POST['confirm_password'];
+
+    $sql = "INSERT INTO usuario (email, nome, password)
+    VALUES ('$email', '$nome', '$password')";
+
+
+    if (mysqli_query($conn, $sql)) {
+        header("Location: entrar.php");
+        exit;
+    } else {
+        $erro = "Erro ao cadastrar!";
+        header("Location: cadastro.php");
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,15 +46,22 @@
 
         <section class="panel-form">
             <h1>Crie sua conta</h1>
+            <?php if(isset($erro)) echo "<p style='color:red; text-align:center;'>$erro</p>"; ?>
 
                 <div id="error-message" class="error-message"></div>
-            <form action="process.php" method="post">
+            <form method="post">
                 <div class="form-group">
                     <label for="nome" class="form-label">email</label>
-                    <input type="email" id="nome" class="form-input" placeholder="email" name="email">
+                    <input type="email" id="email" class="form-input" placeholder="E-mail" name="email">
                     <i class="fas fa-envelope form-input-icon"></i>
                 </div>
-                
+
+                <div class="form-group">
+                    <label for="nome" class="form-label">nome</label>
+                    <input type="text" id="nome" class="form-input" placeholder="Nome" name="nome">
+                    <i class="fas fa-user form-input-icon"></i>
+                </div>
+
                 <div class="form-group">
                     <label for="senha" class="form-label">Senha</label>
                     <input type="password" id="senha" class="form-input" placeholder="Senha" name="password">
