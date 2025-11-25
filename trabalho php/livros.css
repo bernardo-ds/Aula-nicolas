@@ -1,0 +1,161 @@
+/* Definições de Variáveis CSS (Paleta de Cores) */
+:root {
+    --cor-primaria: #2C73D2; /* Azul biblioteca (Títulos, Botões principais) */
+    --cor-secundaria: #26A69A; /* Verde suave (Menus, Bordas, Destaques) */
+    --cor-fundo: #F5F5F5; /* Cinza muito claro */
+    --cor-texto-principal: #333333; /* Cinza escuro */
+    --cor-texto-secundario: #666666; /* Cinza médio */
+    --cor-erro-alerta: #E57373; /* Vermelho suave */
+    --cor-sucesso: #81C784; /* Verde claro */
+}
+
+/* Definições globais e reset básico */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Estilo do Container Principal */
+.con {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Título principal */
+h1 {
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding-bottom: 10px;
+}
+
+/* --- Estilos de Mensagens de Status (Sucesso/Erro) --- */
+.mensagem {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid;
+}
+
+.sucesso {
+    background-color: #e8f5e9; /* Fundo muito claro do verde */
+    color: #388e3c; /* Texto verde escuro */
+    border-color: #a5d6a7;
+}
+
+.erro {
+    background-color: #fce4e4; /* Fundo muito claro do vermelho */
+    color: #c62828; /* Texto vermelho escuro */
+    border-color: #ef9a9a;
+}
+
+/* --- Estilos de Ordenação --- */
+.ordenacao {
+    text-align: right;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: var(--cor-texto-secundario);
+}
+
+.ordenacao a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    padding: 3px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.ordenacao a:hover {
+    background-color: rgba(44, 115, 210, 0.1);
+}
+
+.ordenacao a.ativo {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--cor-primaria);
+}
+
+/* --- Estilos do Bloco Livro --- */
+.livro {
+    background-color: #ffffff;
+    border: 1px solid var(--cor-fundo);
+    border-left: 5px solid var(--cor-secundaria);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.livro:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.livro h3 {
+    color: var(--cor-primaria);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.livro p {
+    margin: 5px 0;
+    line-height: 1.4;
+    color: var(--cor-texto-secundario);
+}
+
+.livro strong {
+    color: var(--cor-texto-principal);
+    display: inline-block;
+    min-width: 80px;
+}
+
+.alerta {
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--cor-erro-alerta);
+    padding: 20px;
+    border: 1px dashed var(--cor-erro-alerta);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* --- Estilo do botão de Sucesso (Cadastrar Novo Livro) --- */
+.btn-sucesso {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: var(--cor-sucesso); /* Botão verde claro de sucesso */
+    color: var(--cor-texto-principal); /* Cor de texto para contraste no botão claro */
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-sucesso:hover {
+    /* Um tom um pouco mais escuro (ou a cor secundária) para o hover */
+    background-color: var(--cor-secundaria); 
+    color: white; /* Muda a cor do texto no hover para melhor legibilidade */
+}
+
+a {
+    text-decoration: none;
+}
