@@ -1,31 +1,64 @@
 <?php
+session_start();
 require("connection.php");
 
+$erros = [];
+$msg = null;
+
 if ($_POST) {
-    $titulo = $_POST['titulo'];
 
-    $autor = $_POST['autor'];
+    // PEGANDO EXATAMENTE OS NAMES DO SEU HTML
+    $titulo     = isset($_POST['titulo'])     ? trim($_POST['titulo'])     : "";
+    $autor      = isset($_POST['autor'])      ? trim($_POST['autor'])      : "";
+    $ano        = isset($_POST['ano'])        ? trim($_POST['ano'])        : "";
+    $categoria  = isset($_POST['categoria'])  ? trim($_POST['categoria'])  : "";
+    $quantidade = isset($_POST['quantidade']) ? trim($_POST['quantidade']) : "";
 
-    $ano = $_POST['ano'];
+    // ======== VALIDAÇÕES ========
+    if ($titulo === "")     $erros[] = "O título é obrigatório.";
+    if ($autor === "")      $erros[] = "O autor é obrigatório.";
+    if ($ano === "" || !is_numeric($ano)) $erros[] = "Ano é obrigatório e deve ser numérico.";
+    if ($categoria === "")  $erros[] = "A categoria é obrigatória.";
+    if ($quantidade === "" || !is_numeric($quantidade))
+        $erros[] = "A quantidade é obrigatória e deve ser numérica.";
 
-    $categoria = $_POST['categoria'];
+    // SE TUDO OK
+    if (empty($erros)) {
 
-    $quantidade = $_POST['quantidade'];
+        $sql = "INSERT INTO livros (titulo, autor, ano, categoria, quantidade) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssisi", $titulo, $autor, $ano, $categoria, $quantidade);
 
-    $sql = "INSERT INTO livros (titulo, autor, ano, categoria, quantidade)
-    VALUES ('$titulo', '$autor', '$ano', '$categoria', '$quantidade')";
-
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Livro cadastrado com suceeso";
-        header('location: livros.php');
-    } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        if ($stmt->execute()) {
+            $_SESSION['msg'] = "Livro cadastrado com sucesso!";
+            header('Location: livros.php');
+            return;
+        } else {
+            $erros[] = "Erro ao salvar no banco.";
+        }
     }
-
-    $conn->close();
 }
 ?>
+
+<?php if (!empty($erros)): ?>
+    <div style="color:red; margin: 10px 0;">
+        <?php foreach ($erros as $msg) echo "<p>$msg</p>"; ?>
+    </div>
+<?php endif; ?>
+
+
+<?php if (!empty($erros)): ?>
+    <div style="color:red; margin: 10px 0;">
+        <?php foreach ($erros as $msg) echo "<p>$msg</p>"; ?>
+    </div>
+<?php endif; ?>
+
+
+<?php if (!empty($erros)): ?>
+    <div style="color:red; margin: 10px 0;">
+        <?php foreach ($erros as $msg) echo "<p>$msg</p>"; ?>
+    </div>
+<?php endif; ?>
 
 
 <!DOCTYPE html>

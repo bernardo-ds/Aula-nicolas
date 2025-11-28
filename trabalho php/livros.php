@@ -1,26 +1,26 @@
 <?php
+session_start();
 include("connection.php");
 
-// 1. Lógica de Ordenação
-// Define a coluna padrão para ordenação
+$pesquisa = isset($_GET['search']) ? trim($_GET['search']) : "";
 $orderBy = 'titulo';
-if (isset($_GET['sort']) && ($_GET['sort'] == 'ano' || $_GET['sort'] == 'titulo')) {
-    $orderBy = $_GET['sort'];
-}
-
 $sql = "SELECT * FROM livros ORDER BY $orderBy";
 $result = $conn->query($sql);
 
-// 2. Lógica de Mensagem
+if ($pesquisa !== "" && strlen($pesquisa) < 2) {
+    echo "<p style='color:red;'>Digite pelo menos 2 caracteres para pesquisar.</p>";
+}   
 $mensagem = '';
-if (isset($_GET['status'])) {
-    if ($_GET['status'] == 'sucesso') {
-        $mensagem = '<div class="mensagem sucesso">✅ Livro cadastrado com sucesso!</div>';
-    } elseif ($_GET['status'] == 'erro') {
-        $mensagem = '<div class="mensagem erro">❌ Erro ao cadastrar o livro. Tente novamente.</div>';
-    }
+
+
+if (isset($_SESSION['msg'])) {
+    echo "<p style='color: green;'>" . $_SESSION['msg'] . "</p>";
+    unset($_SESSION['msg']);
 }
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,7 +46,7 @@ if (isset($_GET['status'])) {
                 |
                 <a href="?sort=ano" class="<?php echo ($orderBy == 'ano' ? 'ativo' : ''); ?>">Ano</a>
             </div>
-           
+
             <?php if ($result->num_rows > 0): ?>
                 <?php while ($row = $result->fetch_assoc()): ?>
 
