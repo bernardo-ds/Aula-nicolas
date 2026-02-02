@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh;           /* Faz o contêiner ocupar toda a altura da tela */
+
+}
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.quadrado1{
+    width: 75%;
+    height: 75%;
+    background-color:grey;
+    border-radius: 13px;
+    
+}
+
+.esquerda{
+     display: flex;
+    justify-content: flex-end;
+}
+
+.cord{
+    background-color: aqua;
+}
+.metade1{
+    width: 50%;
+    height: 100%;
+}
+.metade{
+    width: 50%;
+    height: 100%;
+    border-radius: 13px 0px 0px 13px;
+}
+.cor{
+    background-color: rgb(0, 174, 255);
+}
+.botao{
+    height: 30px;
+    width: 200px;
+    background-color: white;
+}
+.coluna{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.ft{
+    height: 715px;
+    width: 720px;
+    border-radius: 13px 0px 0px 13px;
+}
+.enviar{
+    height: 30px;
+    width: 200px;
+}
+.input{
+    background-color: rgb(138, 206, 180);
+}
