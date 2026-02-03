@@ -11,22 +11,22 @@
 <body>
     <div class="container flex">
         <div class="quadrado1 flex">
-            <div class="metade cor">
-                <img src="download.jpg" class="ft">
+            <div class="metade">
+                <img src="down.jpg" class="ft">
             </div>
-            <div class="metade1 flex coluna">
+            <div class="metade1 flex coluna cor">
                 <h1>Faça seu cadastro a baixo</h1>
                 <br>
                 <form action="processa.php" method="POST">
-                    <input type="text" placeholder="NOME" name="nome" class="botao flex input">
+                    <input type="text" placeholder="NOME" name="nome" class="botao flex input borda">
                     <br>
-                    <input type="email" placeholder="EMAIL" name="email" class="botao flex input">
+                    <input type="email" placeholder="EMAIL" name="email" class="botao flex input borda">
                     <br>
-                    <input type="password" placeholder="SENHA" name="senha" class="botao flex input">
+                    <input type="password" placeholder="SENHA" name="senha" class="botao flex input borda">
                     <br>
-                    <input type="text" placeholder="CPF" name="cpf" class="botao flex input">
+                    <input type="text" placeholder="CPF" name="cpf" class="botao flex input borda">
                     <br>
-                    <input type="date" placeholder="Data de nascimento" name="data_nascimento" class="botao flex input">
+                    <input type="date" placeholder="Data de nascimento" name="data_nascimento" class="botao flex input borda">
                     <br>
                     <input type="submit" value="enviar" class="enviar flex">
                 </form>

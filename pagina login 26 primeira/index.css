@@ -29,11 +29,13 @@
 }
 
 .cord{
-    background-color: aqua;
+    background-color: rgb(0, 0, 0);
 }
 .metade1{
     width: 50%;
     height: 100%;
+    background-color: red;
+    border-radius: 0px 13px 13px 0px;
 }
 .metade{
     width: 50%;
@@ -41,7 +43,7 @@
     border-radius: 13px 0px 0px 13px;
 }
 .cor{
-    background-color: rgb(0, 174, 255);
+    background-color: rgb(82, 79, 79);
 }
 .botao{
     height: 30px;
@@ -64,5 +66,9 @@
     width: 200px;
 }
 .input{
-    background-color: rgb(138, 206, 180);
+    background-color: rgb(255, 255, 255);
+}
+.borda{
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 174, 255, 0.842);
 }
