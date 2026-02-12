@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingressos | Sócio Gigante</title>
+    <link rel="stylesheet" href="ingressos.css">
+    <!-- Ícones via FontAwesome (opcional para setas e whatsapp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
+
+    <!-- Header (Reaproveitado do anterior) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <span class="logo-text">GIGANTE</span>
+                <img src="https://upload.wikimedia.org" alt="Escudo Vasco" class="escudo-mini">
+            </div>
+            <nav class="menu">
+                <a href="#" class="active">Ingressos</a>
+                <a href="#">Planos</a>
+                <a href="#">Cartão Presente</a>
+            </nav>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-login"><i class="fa-regular fa-user"></i> LOGIN</button>
+            <button class="btn-signup">CADASTRE-SE</button>
+        </div>
+    </header>
+
+    <!-- Barra de Contador -->
+    <section class="status-bar">
+        <div class="stripe-bg"></div>
+        <p>SOMOS <span class="highlight">66.846</span> GIGANTES</p>
+    </section>
+
+    <!-- Área de Ingressos / Carrossel de Jogos -->
+    <main class="tickets-container">
+        <div class="event-header">
+            <p class="tournament">CAMPEONATO CARIOCA / ESTÁDIO SÃO JANUÁRIO</p>
+            <h2 class="event-date">SÁBADO | 14 FEVEREIRO</h2>
+        </div>
+
+        <div class="match-area">
+            <!-- Seta Esquerda -->
+            <button class="nav-arrow left"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div class="match-details">
+                <div class="team">
+                    <span class="team-name">VASCO</span>
+                    <img src="https://upload.wikimedia.org" alt="Vasco" class="team-logo">
+                </div>
+
+                <div class="match-info">
+                    <span class="time">21:30</span>
+                </div>
+
+                <div class="team">
+                    <img src="https://upload.wikimedia.org" alt="Volta Redonda" class="team-logo">
+                    <span class="team-name">VOLTA REDONDA</span>
+                </div>
+            </div>
+
+            <!-- Seta Direita -->
+            <button class="nav-arrow right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn-secondary">FAÇA SEU CADASTRO</button>
+            <button class="btn-primary">É Sócio ou já tem cadastro?</button>
+        </div>
+    </main>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="#" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

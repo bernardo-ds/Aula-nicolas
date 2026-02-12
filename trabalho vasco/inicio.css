@@ -1,0 +1,156 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #000;
+    border-bottom: 1px solid #222;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff9900;
+}
+
+/* Botões de Acesso */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-login, .btn-signup {
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-signup {
+    background-color: #ff9900;
+    border: none;
+    color: #000;
+}
+
+/* Barra de Status */
+.status-bar {
+    background-color: #111;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #333;
+}
+
+.highlight {
+    color: #ff9900;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Substitua a URL abaixo pela sua imagem */
+    background-image: url('https://images.unsplash.com');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Escurece a imagem de fundo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #ff9900;
+    color: #000;
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .menu { display: none; }
+    .main-title { font-size: 2rem; }
+    .navbar { padding: 15px 20px; }
+}
